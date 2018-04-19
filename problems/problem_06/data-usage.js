@@ -16,7 +16,7 @@ const dataUsage = () => new Promise((resolve,reject) => {
   })
 
   const val = []
-  Object.keys(data).forEach(dat => val.push({ user: dat, total: data[dat].num, average: (data[dat].num/data[dat].total) }))
+  Object.keys(data).forEach(dat => val.push({ user: dat, total: data[dat].num, average: (data[dat].total/data[dat].num) }))
   resolve(val)
 });
 module.exports = { dataUsage };
